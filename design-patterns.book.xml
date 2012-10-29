@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="design-patterns.book.xsl"?>
+<patterns>
+	<group name_ru="Базовые паттерны">
+		<pattern code="mapper" name_en="Mapper" name_ru="Распределитель">
+			<desc>
+			<p>Объект, который управляет сообщением между независимыми друг от друга объектами.</p>
+
+			<p>Иногда нужно установить сообщение между двумя подсистемами, который, между тем должны оставаться в неведении друг о друге. Это может быть обусловлено невозможностью изменения этих объектов, или просто нежеланием создавать зависимости между ними или между ними и изолирующей частью.</p>
+			</desc>
+		</pattern>
+		<pattern code="money" name_en="Money" name_ru="Деньги">
+			<desc>
+			<p>
+			Огромное количество компьютеров в мире обрабатывают данные о деньгах. Удивительно, что класс Деньги до сих пор не является базовым в любом языке программирования. Недостаток такого рода типа данных приводит к проблемам, наиболее заметные из которых - работа с валютой. Если все вычисления в программе проделываются в одной валюте, никаких особых проблем нет, но как только вводится многовалютность - надо думать о том, чтобы не сложить 10 долларов с 10 йенами без перевода курсов валют. Менее заметна проблема с округлением. Денежные вычисления часто округляют до наименьшей из существующих мер. При этом легко не учесть копейки из-за ошибок округления.
+			</p>
+			<p>
+			Что действительно хорошо в ООП, так это то, что вы можете исправить эти проблемы, созданием класса Money (Деньги), чтобы работать с денежными величинами и избегать общих ошибок.
+			</p>
+			</desc>
+		</pattern>
+		<pattern code="special-case" name_en="Special Case" name_ru="Особый Случай">
+			<desc><p>
+			Подкласс, содержащий особую логику для отдельных ситуаций.
+			</p>
+			<p>
+			Null-значения в ООП - неуклюжая вещь, так как она зарубает на корню полиморфизм. Обычно есть возможность вызова какого-либо метода на переменной заданного типа без необходимости беспокоиться о том, принадлежит ли эта переменная конкретному классу или подклассу. В строго типизированных языках эту проверку делает компилятор. Тем не менее, из-за того, что переменная может содержать null, существует опасность возникновения ошибки во время выполнения, при вызове метода на null-значении.
+			</p>
+			<p>
+			Если переменная может принимать значение null, вам нужно постоянно заботиться о проверках на null и правильной обработке null-значений. Часто, эта "правильная обработка" одинакова во большинстве случаев, и всё это заканчивается совершением греха дублированием кода (дословный перевод Мартина Фаулера).
+			</p>
+			<p>
+			Null-значения - яркий пример таких проблем, которые возникают постоянно и внезапно. А их много. Например, во многих системах приходится работать с бесконечностью, которая имеет особые правила для, например, сложения и нарушает обычные аксиомы, справедливые для натуральных чисел. Такие случаи предполагают изменение обычного поведения типа.
+			</p>
+			<p>
+			Вместо того, чтобы возвращать null или какое-то дополнительное значение, верните Special Case (Особый Случай) - объект с тем же интерфейсом, но ведущий себя иначе, чем основной.
+			</p>
+			</desc>
+		</pattern>
+		<pattern code="plugin" name_en="Plugin" name_ru="Плагин">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="gateway" name_en="Gateway" name_ru="Шлюз">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="separated-interface" name_en="Separated Interface"
+			name_ru="Выделенный интерфейс">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="registry" name_en="Registry" name_ru="Реестр">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="service-stub" name_en="Service Stub" name_ru="Сервисная заглушка">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="value-object" name_en="Value Object" name_ru="Объект-значение">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="record-set" name_en="Record Set" name_ru="">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="layer-supertype" name_en="Layer Supertype"
+			name_ru="Супертип Уровня">
+			<desc>todo</desc>
+		</pattern>
+	</group>
+	<group name_ru="Паттерны веб-представления">
+		<pattern code="transform-view" name_en="Transform View"
+			name_ru="Преобразователь">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="template-view" name_en="Template View" name_ru="Шаблонизатор">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="apppatterncation-controller" name_en="Apppatterncation Controller"
+			name_ru="Контроллер приложения">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="two-step-view" name_en="Two Step View"
+			name_ru="Двухшаговая шаблонизация">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="page-controller" name_en="Page Controller"
+			name_ru="Контроллер страницы">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="front-controller" name_en="Front Controller"
+			name_ru="Контроллер входа / Единая точка входа">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="mvc" name_en="MVC - Model View Controller"
+			name_ru="Модель-Вид-Контроллер">
+			<desc>todo</desc>
+		</pattern>
+	</group>
+	<group name_ru="Паттерны архитектуры источников данных">
+		<pattern code="row-data-gateway" name_en="Row Data Gateway"
+			name_ru="Шлюз к данным записи">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="active-record" name_en="Active Record" name_ru="Активная запись">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="table-data-gateway" name_en="Table Data Gateway"
+			name_ru="Шлюз к данным таблицы">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="data-mapper" name_en="Data Mapper" name_ru="">
+			<desc>todo</desc>
+		</pattern>
+	</group>
+	<group name_ru="Паттерны Объектно-Реляционной логики">
+		<pattern code="lazy-load" name_en="Lazy Load" name_ru="Ленивая загрузка">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="identity-map" name_en="Identity Map"
+			name_ru="Карта присутствия / Карта соответствия">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="unit-of-work" name_en="Unit of Work" name_ru="Единица работы">
+			<desc>todo</desc>
+		</pattern>
+	</group>
+	<group name_ru="Паттерны Объектно-Реляционного структурирования">
+		<pattern code="identity-field" name_en="Identity Field"
+			name_ru="Поле первичного ключа">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="foreign-key-mapping" name_en="Foreign Key Mapping"
+			name_ru="Разметка внешних ключей">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="association-table-mapping" name_en="Association Table Mapping"
+			name_ru="Разметка таблиц связей">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="dependent-mapping" name_en="Dependent Mapping"
+			name_ru="Управление распределением подчинённых сущностей">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="embedded-value" name_en="Embedded Value"
+			name_ru="Объединённое свойство">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="seriapatternzed-lob" name_en="Seriapatternzed LOB"
+			name_ru="Сериализованный LOB">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="single-table-inheritance" name_en="Single Table Inheritance"
+			name_ru="Наследование с единой таблицей">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="class-table-inheritance" name_en="Class Table Inheritance"
+			name_ru="Наследование с таблицами классов">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="concrete-table-inheritance" name_en="Concrete Table Inheritance"
+			name_ru="Наследование с таблицами конечных классов">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="inheritance-mappers" name_en="Inherritance Mappers"
+			name_ru="Наследуемые распределители">
+			<desc>todo</desc>
+		</pattern>
+	</group>
+	<group name_ru="Паттерны логики сущности">
+		<pattern code="transaction-script" name_en="Transaction Script"
+			name_ru="Сценнарий транзакции">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="domain-model" name_en="Domain Model"
+			name_ru="Модель области определения">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="table-module" name_en="Table Module" name_ru="Обработчик таблицы">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="service-layer" name_en="Service Layer" name_ru="Сервисный уровень">
+			<desc>todo</desc>
+		</pattern>
+	</group>
+	<group name_ru="Паттерны обработки Объектно-Реляционных метаданных">
+		<pattern code="metadata-mapping" name_en="Metadata Mapping"
+			name_ru="Распределение на основе метаданных">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="query-object" name_en="Query Object" name_ru="Объект-запрос">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="repository" name_en="Repository" name_ru="Репозиторий">
+			<desc>todo</desc>
+		</pattern>
+	</group>
+	<group name_ru="Паттерны распределения данных">
+		<pattern code="remote-facade" name_en="Remote Facade" name_ru="Парадный вход">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="data-transfer-object" name_en="Data Transfer Object"
+			name_ru="Объект передачи данных">
+			<desc>todo</desc>
+		</pattern>
+	</group>
+	<group name_ru="Паттерны локальной конкуренции">
+		<pattern code="optimistic-offpatternne-lock" name_en="Optimistic Offpatternne Lock"
+			name_ru="Оптимистичная блокировка">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="pessimistic-offpatternne-lock" name_en="Pessimistic Offpatternne Lock"
+			name_ru="Пессимистичная блокировка">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="coarse-grained-lock" name_en="Coarse Grained Lock"
+			name_ru="Грубая блокировка">
+			<desc>todo</desc>
+		</pattern>
+		<pattern code="imppatterncit-lock" name_en="Imppatterncit Lock"
+			name_ru="Скрытая блокировка">
+			<desc>todo</desc>
+		</pattern>
+	</group>
+</patterns>
