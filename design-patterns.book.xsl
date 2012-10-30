@@ -108,9 +108,9 @@
 				img/<xsl:value-of select="@code"></xsl:value-of>.gif
 			</xsl:attribute>
 			</img>
-			<p>
+			<div id="pattern-desc_section">
 				<xsl:copy-of select="desc" />
-			</p>
+			</div>
 		</article>
 	</xsl:template>
 
