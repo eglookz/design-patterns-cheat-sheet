@@ -12,7 +12,9 @@
  
 				<section id="pattern-name-list-view">
 					<h1>Перечень шаблонов проектирования</h1>
+					<section id="pattern-name-list">
 					<xsl:apply-templates mode="pattern-name-list-view" />
+					</section>
 				</section>
 
 				<section id="pattern-diagram-view">

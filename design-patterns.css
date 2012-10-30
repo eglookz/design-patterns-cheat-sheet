@@ -5,15 +5,29 @@ body {
 	font-size: 12px;
 }
 
-article {
-	page-break-inside: avoid;
-	display:block;
+h1 {
+	page-break-before: always;	
 }
 
-#pattern-name-list-view {
+article {
+	page-break-inside: always;
+}
+
+@media print {
+    p {
+     page-break-inside: avoid;
+    } 
+} 
+
+#pattern-name-list {
 	-moz-column-width: 20em; 
 	-webkit-column-width: 20em; 
 	column-width: 20em;
+}
+
+// TODO: не работает
+h1 h2 h3 {
+	margin-top : 0;
 }
 
 #full-view h2 {
@@ -30,6 +44,7 @@ article {
 	margin-top : 0;
 }
 
+// TODO: не работает
 #pattern-desc_section p:first-line {
 	margin-left: 1em;
 	
