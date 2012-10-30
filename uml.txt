@@ -1,0 +1,10 @@
+@startuml img/classes03a.png
+
+class Money {
+ ammount
+ currency
+ ++ — *()
+ > < >= <= ==()
+}
+
+@enduml

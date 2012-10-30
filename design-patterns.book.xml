@@ -3,6 +3,17 @@
 <patterns>
 	<group name_ru="Базовые паттерны">
 		<pattern code="mapper" name_en="Mapper" name_ru="Распределитель">
+			<uml>
+				<![CDATA[
+					@startuml img/mapper.svg
+					Alice -> Bob: Authentication Request
+					Bob --> Alice: Authentication Response
+					
+					Alice -> Bob: Another authentication Request
+					Alice <-- Bob: another authentication Response
+					@enduml
+				]]>
+			</uml>
 			<desc>
 				<p>Объект, который управляет сообщением между независимыми друг от
 					друга объектами.
@@ -17,6 +28,18 @@
 			</desc>
 		</pattern>
 		<pattern code="money" name_en="Money" name_ru="Деньги">
+			<uml>
+				<![CDATA[
+					@startuml img/money.svg
+					class Money {
+						ammount
+						currency
+						++ — *()
+						> < >= <= ==()
+					}
+					@enduml
+				]]>
+			</uml>
 			<desc>
 				<p>
 					Огромное количество компьютеров в мире обрабатывают данные о

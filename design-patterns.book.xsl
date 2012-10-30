@@ -9,7 +9,7 @@
 				</link>
 			</head>
 			<body>
-			<!-- 
+ 
 				<section id="pattern-name-list-view">
 					<h1>Перечень шаблонов проектирования</h1>
 					<xsl:apply-templates mode="pattern-name-list-view" />
@@ -19,11 +19,12 @@
 					<h1>Шаблоны проектирования в картинках</h1>
 					<xsl:apply-templates mode="pattern-diagram-view" />
 				</section>
--->
+ 
 				<section id="full-view">
 					<h1>Шаблоны проектирования с описанием</h1>
 					<xsl:apply-templates mode="full-view" />
 				</section>
+				
 			</body>
 		</html>
 
@@ -70,6 +71,18 @@
 				img/<xsl:value-of select="@code"></xsl:value-of>.gif
 			</xsl:attribute>
 		</img>
+		<img>
+			<xsl:attribute name="src">
+				img/<xsl:value-of select="@code"></xsl:value-of>.svg
+			</xsl:attribute>
+		</img>
+		
+		<img>
+			<xsl:attribute name="src">
+				img/<xsl:value-of select="@code"></xsl:value-of>.png
+			</xsl:attribute>
+		</img>
+		
 		</article>
 	</xsl:template>
 
